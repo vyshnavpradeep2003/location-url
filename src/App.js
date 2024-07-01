@@ -34,7 +34,7 @@ function App() {
     }
 
     try {
-      const response = await axios.get(`http://ip-api.com/json/${domain}`);
+      const response = await axios.get(`https://cors-anywhere.herokuapp.com/http://ip-api.com/json/${domain}`);
       if (response.data.status === 'success') {
         setWebsitePosition({
           lat: response.data.lat,
